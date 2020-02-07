@@ -15,6 +15,6 @@ Start:
 ```
 docker-compose -f payara-dsd-example-stack.yml up
 ```
-The root endpoint in [DataSourceStatusController.java](src\main\java\stulv\payara\datasourcedefinition\example\DataSourceStatusController.java)
+The root endpoint in [DataSourceStatusController.java](src/main/java/stulv/payara/datasourcedefinition/example/DataSourceStatusController.java)
 can be reached at:  
 [http://localhost:8080/](http://localhost:8080/)
