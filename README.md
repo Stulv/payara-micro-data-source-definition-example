@@ -5,7 +5,7 @@ references in the @DataSourceDefinition annotation.
 
 [Using variable references in Payara configuration](https://docs.payara.fish/documentation/payara-server/server-configuration/var-substitution/usage-of-variables.html)
 
-## Build & run
+## Build & run using Docker
 
 Build the image:
 ```
@@ -16,5 +16,14 @@ Start:
 docker-compose -f payara-dsd-example-stack.yml up
 ```
 The root endpoint in [DataSourceStatusController.java](src/main/java/stulv/payara/datasourcedefinition/example/DataSourceStatusController.java)
-can be reached at:  
-[http://localhost:8080/](http://localhost:8080/)
+can be reached at [http://localhost:8080/](http://localhost:8080/).
+It lists each data source configuration and if it loaded successfully or not.
+```
+{
+    "HardCodedDataSourceConfig.java" :  "SUCCESS",
+    PropertyDataSourceConfig.java" :    "SUCCESS",
+    "MPCONFIGDataSourceConfig.java" :   "FAILURE",
+    "ENVDataSourceConfig.java" :        "FAILURE",
+    "MixedDataSourceConfig.java" :      "SUCCESS"
+}
+```

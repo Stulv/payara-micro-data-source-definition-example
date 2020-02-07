@@ -7,7 +7,7 @@ RUN mvn dependency:go-offline
 COPY src src
 RUN mvn package
 
-# Step 2 Prepare the runtime image
+# Prepare the runtime image
 FROM payara/micro:5.194
 ENV APP_NAME=payara-dsd-example
 ENV DEPENDENCY_DIR=target
